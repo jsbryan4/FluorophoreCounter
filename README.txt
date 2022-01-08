@@ -1,4 +1,23 @@
-# FluorophoreCounter
+
+This repository contains a folder, data, which contains all the data files that were used in the work:
+data_140_binding_sites.csv
+data_20_binding_sites.csv
+data_35_binding_sites.csv
+data_40_binding_sites.csv
+data_70_binding_sites.csv
+data_80_binding_sites.csv
+sim_100_flors.csv
+sim_20_flors.csv
+sim_40_flors.csv
+sim_60_flors.csv
+sim_80_flors.csv
+sim_demonstration.csv
+sim_high_noise.csv
+sim_start_dark.csv
+Each data file is a csv where each row is the brightness trace of a different ROI and each column is a differnt time level. For example, the brightness of the 4th ROI at the 27th time level in data simulated with 20 fluorophroes will be the element of sim_20_flors in the 4th row and 27th column.
+
+This repository contains 4 python files main.py, fluorophore_counter.py, algorithms.py, and simulate_data.py. The first file, main.py, is the only file that should be run and edited. The remaining files simply hold functions that are called by main.py. To run the main.py file simply specify the ID (line 69) for which data set to run on and then execute the code. We break down how the code works below.
+
 
 The flourophore counter algorithm has been packaged into a python class. To import the fluorophore counter use:
 
@@ -65,5 +84,6 @@ counter.gibbs_sampler(
 
 # get output
 map_num_flors = counter.history.get('map').num_flors
+
 
 
